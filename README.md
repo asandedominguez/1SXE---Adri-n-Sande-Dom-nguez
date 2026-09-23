@@ -181,4 +181,4 @@ Iniciamos sesión con nuestro usuario y contraseña.
 
 Y ya tenemos nuestro servidor abierto, configurado y operativo.
 
-![2.png](Capturas/42.png)
+![2.png](Capturas/46.png)
