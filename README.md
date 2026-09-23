@@ -189,3 +189,8 @@ Iniciamos sesión con nuestro usuario y contraseña.
 Y ya tenemos nuestro servidor abierto, configurado y operativo.
 
 ![2.png](Capturas/46.png)
+
+<br>
+<br>
+
+No tuve ningún error en todo este proceso.
