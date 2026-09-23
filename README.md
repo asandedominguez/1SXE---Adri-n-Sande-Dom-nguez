@@ -168,8 +168,9 @@ Con todas estas operaciones ya tendriamos todo correcto para abrir y trabajar en
 https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview
 
 <br>
+<br>
 
-Ponemos nuestra ip en un buscador y ya se abrirá el menú inicial de WordPress.
+Ahora ponemos nuestra ip en un buscador y ya se abrirá el menú inicial de WordPress.
 
 Ponemos el idioma en español.
 
