@@ -1,11 +1,11 @@
 
 | Elemento | Lo que dice la documentación | Lo que necesita la VM | Otros (comentarios que consideres relevantes) | Fuente de info |
 | --- | --- | --- | --- | --- |
-| S.O | Cualquier S.O puede alojar WordPress. Requiere bases de datos, lenguajes de programación, servidor web y servicios compatibles con este (MySQL, PHP)| Utilizo Ubuntu serevr. límite genérico de 512MB  de memoria RAM por defecto (4GB en mi máquina) <br/> <br/> 1 procesador como mínimo (2 en mi máquina) <br/> <br/> 1GB de dsico como mínimo (20 en mi máquina) | Utilizo Ubuntu serever ya que estoy acostumbrado a trabajar con el, además de que es muy estable y podre sacar el máximo provecho a las utilidades de WordPress. | https://www.wpsysadmin.com/seguridad/hosting/versiones/#sistema-operativo <br/> <br/> https://cloudmax.es/aumentar-wp-memory-limit-en-wordpress/ <br/><br/> https://www.wpbeginner.com/es/beginners-guide/important-wordpress-server-requirements-you-should-know/ <br/> <br/> https://www.wpbeginner.com/es/beginners-guide/important-wordpress-server-requirements-you-should-know/ <br/> <br/> https://es.wordpress.org/about/features/|
+| S.O | Cualquier S.O puede alojar WordPress. Requiere bases de datos, lenguajes de programación, servidor web y servicios compatibles con este (MySQL, PHP)| Utilizo Ubuntu server. límite genérico de 512MB  de memoria RAM por defecto (4GB en mi máquina) <br/> <br/> 1 procesador como mínimo (2 en mi máquina) <br/> <br/> 1GB de disco como mínimo (20 en mi máquina) | Utilizo Ubuntu serever ya que estoy acostumbrado a trabajar con el, además de que es muy estable y podré sacar el máximo provecho a las utilidades de WordPress. | https://www.wpsysadmin.com/seguridad/hosting/versiones/#sistema-operativo <br/> <br/> https://cloudmax.es/aumentar-wp-memory-limit-en-wordpress/ <br/><br/> https://www.wpbeginner.com/es/beginners-guide/important-wordpress-server-requirements-you-should-know/ <br/> <br/> https://www.wpbeginner.com/es/beginners-guide/important-wordpress-server-requirements-you-should-know/ <br/> <br/> https://es.wordpress.org/about/features/|
 | Servidor web | Debe contar con: PHP, MariaDB o MySQL, HTTPS, Apache o Nginx. 10GB de capacidad recomendada. "mod_rewrite" (permite reescribir y redirigir URL) | PHP 8.3, MariaDB 10.11, MySQL 8.0, Apache con modo "mod_rewrite" (permite reescribir y redirigir URL)| Se pueden utilizar versiones muy anteriores como PHP 7.4 o MySQL 5.5.5 | https://wordpress.org/about/requirements/ <br/> <br/> https://www.doominio.com/blog/cuanto-espacio-necesito-para-mi-web#1_GB_es_espacio_de_sobra_para_cualquier_web|
-| Versión de PHP | 8.3 | 8.3 | No utilizó la versión 8.5 ya que se la 8.3 es la mas recomendada | https://wordpress.org/about/requirements/ |
+| Versión de PHP | 8.3 | 8.3 | No utilizó la versión 8.5 ya que la 8.3 es la mas recomendada | https://wordpress.org/about/requirements/ |
 | Gestor de BBDD | MySQL o MariaDB | MySQL | Utilizo MySQL porque ya trabajé con el anteriormente| https://wordpress.org/about/requirements/ |
-| Memoria y Disco | Lo recomendado es entre 2-4 RAM y 10 MB de memoria| 4GB de RAM y 20MB memoria| No le doy lo máximo recomendado ya que considero que no hará falta | https://valebyte.com/es/blog/cu%C3%A1nta-ram-se-necesita-para-alojar-50-sitios-de-wordpress/ |
+| Memoria y Disco | Lo recomendado es entre 2-4 RAM y 10 MB de memoria| 4GB de RAM y 20MB memoria en este caso| No le doy lo máximo recomendado ya que considero que no hará falta | https://valebyte.com/es/blog/cu%C3%A1nta-ram-se-necesita-para-alojar-50-sitios-de-wordpress/ |
 
 <br>
 
@@ -15,7 +15,7 @@ En primer lugar prepararemos la máquina virtual, para ello pondremos las siguie
 
 ![2.png](Capturas/2.png)
 
-Añadimos la ISO de ubuntu serevr.
+Añadimos la ISO de ubuntu server.
 
 ![3.png](Capturas/3.png)
 
@@ -25,7 +25,7 @@ Ponemos el adaptador en puente para que pueda haber comunicación entre la máqu
 
 ![1.png](Capturas/5.png)
 
-Ya esta lista para la instalación del sistema operativo, así que la abrimos y comenzamos el proceso (solo explicaré las partes que no sean obvias):
+Ya está lista para la instalación del sistema operativo, así que la abrimos y comenzamos el proceso (solo explicaré las partes que no sean obvias):
 
 ![1.png](Capturas/6.png)
 
@@ -33,7 +33,7 @@ Ya esta lista para la instalación del sistema operativo, así que la abrimos y 
 
 ![1.png](Capturas/8.png)
 
-Elegimos la versión estandar de Ubuntu serever.
+Elegimos la versión estandar de Ubuntu server.
 
 ![1.png](Capturas/9.png)
 
@@ -62,7 +62,7 @@ Skipeamos la siguiente opción.
 
 ![1.png](Capturas/18.png)
 
-Instalamos servidor SSH para las operaciones posteriores.
+Instalamos el servidor SSH para las operaciones posteriores.
 
 ![1.png](Capturas/19.png)
 
@@ -74,7 +74,7 @@ Saltamos las siguientes funcionalidades.
 
 ![1.png](Capturas/21.png)
 
-Iniciamos sesión y el S.O ya está listo para trabajar.
+Iniciamos sesión y el S.O, y ya está listo para trabajar.
 
 ![1.png](Capturas/22.png)
 
@@ -82,7 +82,7 @@ Nos conectamos mediante SSH desde nuestrá máquina principal
 
 ![1.png](Capturas/23.png)
 
-Comenzamos con el proceso de instalación de WordPress con la descarga de las siguientes librerias
+Comenzamos con el proceso de instalación de WordPress con la descarga de las siguientes librerias:
 
 ![1.png](Capturas/24.png)
 
@@ -92,20 +92,20 @@ Creamos el directorio /srv/www (la opción -p es para crear el padre si no exist
 
 Hacemos propietario al usuario y grupo www-data, que es el usuarido estandar de Apache, así tendremos todos los privilegios al operar en el.
 
-con curl descargaremos la versión mas reciente de WordPress y lo guarda en el directorio que creamos antes
+Con curl descargaremos la versión mas reciente de WordPress y lo guarda en el directorio que creamos antes
 
 ![1.png](Capturas/26.png)
 
 Modificamos el fichero de texto especificado con la información que se ve. Hará las siguientes acciones:
 
 - Se escucharán las conexiones provenientes del puerto 80 para que la web se pueda ver en internet.
-- Los archivos de la web se guardará en el directorio /srv/www/wordpress.
+- Los archivos de la web se guardarán en el directorio /srv/www/wordpress.
 - Cualquier usuario puede acceder a la web.
 - Habilitá el funcionamiento de WordPress.
 
 ![1.png](Capturas/27.png)
 
-Habilitamos WordPress en el servidor Apache
+Habilitamos WordPress en el servidor Apache.
 
 ![1.png](Capturas/28.png)
 
@@ -113,7 +113,7 @@ Habilita el modo mod_rewrite, que permitirá reescribir las URLs para que sean m
 
 ![1.png](Capturas/29.png)
 
-Desabilitamos el sitio web que viene por defecto en apache para poner el nuestro
+Desabilitamos el sitio web que viene por defecto en Apache para poner el nuestro.
 
 ![1.png](Capturas/30.png)
 
@@ -121,7 +121,7 @@ Reiniciamos Apache
 
 ![1.png](Capturas/32.png)
 
-Accedemos a la consola de SQL con root
+Accedemos a la consola de SQL con root.
 
 ![1.png](Capturas/33.png)
 
@@ -146,10 +146,10 @@ Generamos el archivo de configuración de WordPress.
 Estas 3 lineas harán lo siguiente (van por orden):
 
 1. Sustituye el nombre predeterminada del servidor por WordPress.
-2. El nombre por por WordPress (el que establecimos).
+2. El nombre de usuario por por WordPress (el que establecimos).
 3. La contraseña por la que pusimos.
 
-(Toda esta información la se porque es la que está en el fichero de configuración, se puede confirmar en su respectiva captura de pantalla).
+(Toda esta información la se porque es la que está en el fichero de configuración, se puede confirmar en la captura de pantalla nº 41).
 
 ![2.png](Capturas/38.png)
 
@@ -163,7 +163,13 @@ Y ponemos la contraseña del servidor en la línea que corresponde.
 
 ![2.png](Capturas/41.png)
 
-Ponemos nuestra IP en un buscador y ya se abrirá el menú inicial de WordPress.
+Con todas estas operaciones ya tendriamos todo correcto para abrir y trabajar en el servidor. Seguí la siguiente guía para realizar este proceso:
+
+https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview
+
+<br>
+
+Ponemos nuestra ip en un buscador y ya se abrirá el menú inicial de WordPress.
 
 Ponemos el idioma en español.
 
